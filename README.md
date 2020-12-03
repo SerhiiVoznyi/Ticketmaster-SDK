@@ -23,8 +23,8 @@ Details you can find in 'Authors' section below.
 ## Overview
 The solution contains different projects
 
-- [Ticketmaster.Core](https://github.com/SerhiiVoznyi/ticketmaster-api-sdk-dot-net/tree/master/src/Ticketmaster.Core)
-- [Ticketmaster.Discovery](https://github.com/SerhiiVoznyi/ticketmaster-api-sdk-dot-net/tree/master/src/Ticketmaster.Discovery)
+- [Ticketmaster.Core](https://github.com/SerhiiVoznyi/Ticketmaster-SDK/tree/master/src/Ticketmaster.Core)
+- [Ticketmaster.Discovery](https://github.com/SerhiiVoznyi/Ticketmaster-SDK/tree/master/src/Ticketmaster.Discovery)
 
 ## Usage
 
