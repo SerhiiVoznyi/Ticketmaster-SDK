@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ticketmaster.Core", "Ticketmaster.Core\Ticketmaster.Core.csproj", "{616878AA-E3DA-4272-8E09-6E39CCF4F1CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ticketmaster.Discovery", "Ticketmaster.Discovery\Ticketmaster.Discovery.csproj", "{A04DEFB5-F979-4DA6-939C-4FA208514C79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ticketmaster.Discovery.Tests", "Ticketmaster.Discovery.Tests\Ticketmaster.Discovery.Tests.csproj", "{9E96079C-8DA9-42A5-B5F0-265A0004CD4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ticketmaster.Core.Tests", "Ticketmaster.Core.Tests\Ticketmaster.Core.Tests.csproj", "{4F408666-0634-4EDD-B3E6-4D9C9F0FB568}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketmaster.Discovery.IntegrationTests", "Ticketmaster.Discovery.IntegrationTests\Ticketmaster.Discovery.IntegrationTests.csproj", "{20F97921-0796-4D2D-8F99-A7F36AA9AD18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{616878AA-E3DA-4272-8E09-6E39CCF4F1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616878AA-E3DA-4272-8E09-6E39CCF4F1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616878AA-E3DA-4272-8E09-6E39CCF4F1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616878AA-E3DA-4272-8E09-6E39CCF4F1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A04DEFB5-F979-4DA6-939C-4FA208514C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A04DEFB5-F979-4DA6-939C-4FA208514C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A04DEFB5-F979-4DA6-939C-4FA208514C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A04DEFB5-F979-4DA6-939C-4FA208514C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E96079C-8DA9-42A5-B5F0-265A0004CD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E96079C-8DA9-42A5-B5F0-265A0004CD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E96079C-8DA9-42A5-B5F0-265A0004CD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E96079C-8DA9-42A5-B5F0-265A0004CD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F408666-0634-4EDD-B3E6-4D9C9F0FB568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F408666-0634-4EDD-B3E6-4D9C9F0FB568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F408666-0634-4EDD-B3E6-4D9C9F0FB568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F408666-0634-4EDD-B3E6-4D9C9F0FB568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F97921-0796-4D2D-8F99-A7F36AA9AD18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F97921-0796-4D2D-8F99-A7F36AA9AD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F97921-0796-4D2D-8F99-A7F36AA9AD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F97921-0796-4D2D-8F99-A7F36AA9AD18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE1F22EC-069A-4ADC-9607-1668EBBE435A}
+	EndGlobalSection
+EndGlobal
