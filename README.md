@@ -4,7 +4,8 @@
 
 ## Legal notice
 <p>
-Code & Opinions expressed are solely my own and do not express the views or opinions of my employer. This code is not supported by employer
+Code & Opinions expressed in this repository are solely my own and do not express the views or opinions of my employer.
+This code is not supported by any employer as well as not profitable and do not bring any financial benefits. All work that was done during its creation was conducted in my spare/personal time and based only on my willingness to help the open-source community.
 </p>
 
 ## About
