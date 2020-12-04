@@ -2,6 +2,11 @@
 
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SerhiiVoznyi/ticketmaster-api-sdk-dot-net/blob/master/LICENSE.md)
 
+# Legal notice
+<p>
+Code & Opinions expressed are solely my own and do not express the views or opinions of my employer. This code is not supported by employer
+</p>
+
 <p>
 The Ticketmaster Open API Wrapper contains projects with the implementation of easy access to API endpoints. 
 For more detailed information about the API and to get your API key head <a href="http://developer.ticketmaster.com/">here</a>. 
