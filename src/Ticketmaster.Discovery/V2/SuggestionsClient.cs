@@ -13,22 +13,27 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
-namespace Ticketmaster.Core.V2.Models
+namespace Ticketmaster.Discovery.V2
 {
-    using System.Collections.Generic;
+    using RestSharp;
+    using System.Net;
+    using System.Threading.Tasks;
+    using Ticketmaster.Core;
+    using Ticketmaster.Discovery.V2.Models;
 
-    public class BaseEvent : IdNamePair
+    public class SuggestionsClient : BaseClient, ISuggestionsClient
     {
-        public BaseEvent()
+        public const string SuggestPath = "/v2/suggest.json";
+
+        public SuggestionsClient(IRestClient client, IClientConfig config)
+            : base(client, config)
         {
-            Images = new List<Image>();
         }
 
-        public string Type { get; set; }
-        public bool Test { get; set; }
-        public string Url { get; set; }
-        public string Locale { get; set; }
-        public string Info { get; set; }
-        public List<Image> Images { get; set; }
+        public Task<FindSuggestResponse> FindSuggestAsync(FindSuggestRequest request)
+        {
+            return ExecuteRequestAsync<FindSuggestResponse>(RequestHelper.CreateGetRequest(request, SuggestPath),
+                HttpStatusCode.OK, request);
+        }
     }
 }

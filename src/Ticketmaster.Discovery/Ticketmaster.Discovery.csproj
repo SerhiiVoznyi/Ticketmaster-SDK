@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>Serhii Voznyi</Authors>
     <Company>Serhii Voznyi</Company>
-    <Version>2.0.4</Version>
+    <Version>2.0.5</Version>
     <Description>This project contains useful interfaces and implementation for them to makes calls to api endpoint more simple and friendly for .net developers. 
      The SDK splits all requests for Discovery API between specific interfaces by logical ownership.
      *IEventsClient
@@ -31,11 +31,12 @@ var discovery = new DiscoveryApi().Configure(config);
 Then we will be able to access all clients in this api. To access the endpoints for Events we can use Events Client like this:
 
 discovery.Events.SearchEventsAsync(new SearchEventsRequest());</PackageReleaseNotes>
-    <AssemblyVersion>2.0.4.0</AssemblyVersion>
-    <FileVersion>2.0.4.0</FileVersion>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <FileVersion>2.0.5.0</FileVersion>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageIcon>tm.jpg</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -51,6 +52,10 @@ discovery.Events.SearchEventsAsync(new SearchEventsRequest());</PackageReleaseNo
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ticketmaster.Core" Version="2.0.5" />
   </ItemGroup>
 
   <ItemGroup>

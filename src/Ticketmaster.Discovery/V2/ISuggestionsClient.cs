@@ -13,18 +13,22 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
-namespace Ticketmaster.Discovery.V2.Models
+// ReSharper disable once CheckNamespace
+namespace Ticketmaster.Discovery
 {
-    public enum SearchVenuesQueryParameters
+    using System.Threading.Tasks;
+    using Ticketmaster.Discovery.V2.Models;
+
+    /// <summary>
+    ///     The ISuggestionsClient interface.
+    /// </summary>
+    public interface ISuggestionsClient
     {
-        keyword = 1,
-        locale = 2,
-        size = 3,
-        page = 4,
-        sort = 5,
-        stateCode = 6,
-        countryCode = 7,
-        includeTest = 8,
-        source = 9
+        /// <summary>
+        ///      Find search suggestions and filter your suggestions by location, source, etc.
+        /// </summary>
+        /// <param name="request">The <see cref="FindSuggestRequest"/> request.</param>
+        /// <returns>Task for <see cref="FindSuggestResponse"/>.</returns>
+        Task<FindSuggestResponse> FindSuggestAsync(FindSuggestRequest request);
     }
 }

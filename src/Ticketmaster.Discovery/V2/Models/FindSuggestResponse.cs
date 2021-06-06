@@ -15,16 +15,23 @@
 //   limitations under the License.
 namespace Ticketmaster.Discovery.V2.Models
 {
-    public enum SearchVenuesQueryParameters
+    using System.Collections.Generic;
+    using Ticketmaster.Core;
+    using Ticketmaster.Core.V2.Models;
+
+    public class FindSuggestResponse : ApiResponseBase<FindSuggestResponse.Embedded>
     {
-        keyword = 1,
-        locale = 2,
-        size = 3,
-        page = 4,
-        sort = 5,
-        stateCode = 6,
-        countryCode = 7,
-        includeTest = 8,
-        source = 9
+        public class Embedded
+        {
+            public Embedded()
+            {
+                Events = new List<Event>();
+            }
+
+            public List<Venue> Venues { get; set; }
+            public List<Attraction> Attractions { get; set; }
+            public List<Event> Events { get; set; }
+            public List<Product> Products { get; set; }
+        }
     }
 }

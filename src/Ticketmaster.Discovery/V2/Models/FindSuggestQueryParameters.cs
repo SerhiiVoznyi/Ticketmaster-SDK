@@ -15,16 +15,26 @@
 //   limitations under the License.
 namespace Ticketmaster.Discovery.V2.Models
 {
-    public enum SearchVenuesQueryParameters
+    public enum FindSuggestQueryParameters
     {
-        keyword = 1,
-        locale = 2,
-        size = 3,
-        page = 4,
-        sort = 5,
-        stateCode = 6,
-        countryCode = 7,
-        includeTest = 8,
-        source = 9
+        keyword,
+        latlong,
+        radius,
+        unit,
+        source,
+        locale,
+        includeTBA,
+        includeTBD,
+        includeTest,
+        size,
+        countryCode,
+        segmentId,
+        geoPoint,
+        resource,
+        preferredCountry,
+        startEndDateTime,
+        localStartEndDateTime,
+        includeSpellcheck,
+        domain
     }
 }

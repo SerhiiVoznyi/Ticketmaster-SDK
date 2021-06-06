@@ -17,16 +17,16 @@
       * IdTypePairCollectionData
       * CurrencyValuePair</Description>
     <PackageId>Ticketmaster.Core</PackageId>
-    <Version>2.0.4</Version>
+    <Version>2.0.5</Version>
     <Authors>Serhii Voznyi</Authors>
-    <Copyright>Serhii Voznyi © 2020</Copyright>
+    <Copyright>Serhii Voznyi © 2021</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/SerhiiVoznyi/ticketmaster-api-sdk-dot-net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SerhiiVoznyi/ticketmaster-api-sdk-dot-net</RepositoryUrl>
     <PackageTags>Ticketmaster</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>2.0.4.0</AssemblyVersion>
-    <FileVersion>2.0.4.0</FileVersion>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <FileVersion>2.0.5.0</FileVersion>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageIcon>tm.jpg</PackageIcon>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>

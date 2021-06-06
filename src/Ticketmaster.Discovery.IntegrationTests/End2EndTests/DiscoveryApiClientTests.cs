@@ -60,6 +60,9 @@
 
             Assert.NotNull(sut.Classifications);
             Assert.IsType<ClassificationsClient>(sut.Classifications);
+
+            Assert.NotNull(sut.Suggestions);
+            Assert.IsType<SuggestionsClient>(sut.Suggestions);
         }
 
         [Fact]
@@ -69,13 +72,15 @@
             var venuesClient = Substitute.For<IVenuesClient>();
             var attractionsClient = Substitute.For<IAttractionsClient>();
             var classificationsClient = Substitute.For<IClassificationsClient>();
+            var suggestionsClient = Substitute.For<ISuggestionsClient>();
 
-            var sut = new DiscoveryApi(eventsClient, venuesClient, attractionsClient, classificationsClient);
+            var sut = new DiscoveryApi(eventsClient, venuesClient, attractionsClient, classificationsClient, suggestionsClient);
 
             Assert.Equal(eventsClient, sut.Events);
             Assert.Equal(venuesClient, sut.Venues);
             Assert.Equal(attractionsClient, sut.Attractions);
             Assert.Equal(classificationsClient, sut.Classifications);
+            Assert.Equal(suggestionsClient, sut.Suggestions);
         }
     }
 }
