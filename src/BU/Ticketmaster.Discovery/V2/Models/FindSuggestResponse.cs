@@ -1,0 +1,39 @@
+﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+//
+//     https://www.linkedin.com/in/serhii-voznyi/
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+namespace Ticketmaster.Discovery.V2.Models
+{
+    using System.Collections.Generic;
+    using Ticketmaster.Core;
+    using Ticketmaster.Core.V2.Models;
+
+    public class FindSuggestResponse : ApiResponseBase<FindSuggestResponse.Embedded>
+    {
+        public class Embedded
+        {
+            public List<Attraction> Attractions { get; set; }
+            public List<Event> Events { get; set; }
+            public List<Product> Products { get; set; }
+
+            public List<Venue> Venues { get; set; }
+
+            public Embedded()
+            {
+                Events = new List<Event>();
+            }
+        }
+    }
+}
