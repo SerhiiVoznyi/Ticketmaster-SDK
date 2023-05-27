@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -18,9 +18,9 @@ namespace Ticketmaster.Discovery.Models
 {
     using Ticketmaster.Core;
 
-    public class SearchEventsRequest : BaseQuery<SearchEventsRequest, SearchEventsQueryParameters>, IApiRequest
+    public class SearchEventsRequest : BaseQuery<SearchEventsRequest, string>, IApiRequest
     {
-        public override SearchEventsRequest AddQueryParameter<TValue>(SearchEventsQueryParameters parameter,
+        public override SearchEventsRequest AddQueryParameter<TValue>(string parameter,
             TValue value)
         {
             AddParameter(parameter, value);

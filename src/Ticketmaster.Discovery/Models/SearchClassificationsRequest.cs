@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -17,11 +17,10 @@
 namespace Ticketmaster.Discovery.Models
 {
     using Ticketmaster.Core;
-    using Ticketmaster.Core.V2.Models;
 
-    public class SearchClassificationsRequest : BaseQuery<SearchClassificationsRequest, QueryParameters>
+    public class SearchClassificationsRequest : BaseQuery<SearchClassificationsRequest, string>, IApiRequest
     {
-        public override SearchClassificationsRequest AddQueryParameter<TValue>(QueryParameters parameter, TValue value)
+        public override SearchClassificationsRequest AddQueryParameter<TValue>(string parameter, TValue value)
         {
             AddParameter(parameter, value);
             return this;

@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -38,18 +38,18 @@ namespace Ticketmaster.Discovery
         {
         }
 
-        public Task<SearchClassificationsResponse> ClassificationSearch(IApiRequest request) =>
-            ClassificationSearch(request, CancellationToken.None);
+        public Task<SearchClassificationsResponse> Search(SearchClassificationsRequest request) =>
+            Search(request, CancellationToken.None);
 
-        public async Task<SearchClassificationsResponse> ClassificationSearch(IApiRequest request, CancellationToken ct)
+        public async Task<SearchClassificationsResponse> Search(SearchClassificationsRequest request, CancellationToken ct)
         {
             var searchRequest = new RestRequest(ClassificationsPath) { RequestFormat = DataFormat.Json };
             return await Execute<SearchClassificationsResponse>(searchRequest, request, HttpStatusCode.OK, ct);
         }
 
-        public Task<Classification> GetClassificationDetails(GetRequest request) => GetClassificationDetails(request, CancellationToken.None);
+        public Task<Classification> GetDetails(GetRequest request) => GetDetails(request, CancellationToken.None);
 
-        public async Task<Classification> GetClassificationDetails(GetRequest request, CancellationToken ct)
+        public async Task<Classification> GetDetails(GetRequest request, CancellationToken ct)
         {
             return await Execute<Classification>(request.ToRestRequest(ClassificationsPathWithId), request, HttpStatusCode.OK, ct);
         }

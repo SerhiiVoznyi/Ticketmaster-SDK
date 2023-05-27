@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -16,11 +16,11 @@
 
 namespace Ticketmaster.Core
 {
-    using RestSharp;
     using System.IO;
     using System.Net;
     using System.Text;
     using System.Threading.Tasks;
+    using RestSharp;
 
     public abstract class BaseClient
     {

@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -16,8 +16,11 @@
 
 namespace Ticketmaster.Core.V2.Models
 {
+    using System.Text.Json.Serialization;
+
     public class SubGenre : IdNamePair
     {
+        [JsonPropertyName("_links")]
         public Links Links { get; set; }
     }
 }

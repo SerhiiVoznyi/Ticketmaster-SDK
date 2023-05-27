@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -21,11 +21,15 @@ namespace Ticketmaster.Core.V2.Models
     public class BaseEvent : IdNamePair
     {
         public List<Image> Images { get; set; }
+
         public string Info { get; set; }
+
         public string Locale { get; set; }
+
         public bool Test { get; set; }
 
         public string Type { get; set; }
+
         public string Url { get; set; }
 
         public BaseEvent()

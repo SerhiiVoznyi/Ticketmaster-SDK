@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -24,9 +24,9 @@ namespace Ticketmaster.Core
 
     public interface IApiResponse<TData> : IApiResponse
     {
-        [JsonPropertyName("_embedded")]
+        [JsonPropertyName("Embedded")]
         TData Embedded { get; set; }
 
-        TData Data { get; }
+        TData Data => Embedded;
     }
 }

@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -16,12 +16,12 @@
 
 namespace Ticketmaster.Core.V2.Models
 {
-    public enum QueryParameters
+    public class PreSale
     {
-        keyword = 1,
-        locale = 2,
-        size = 3,
-        page = 4,
-        sort = 5
+        public string Name { get; set; }
+
+        public DateTime EndDateTime { get; set; }
+
+        public DateTime StartDateTime { get; set; }
     }
 }

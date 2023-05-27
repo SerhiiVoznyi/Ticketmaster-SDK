@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -23,13 +23,13 @@ namespace Ticketmaster.Discovery
 
     public interface IEventsClient
     {
-        Task<Event> GetEventDetails(GetRequest request);
-        Task<Event> GetEventDetails(GetRequest request, CancellationToken ct);
+        Task<Event> GetDetails(GetRequest request);
+        Task<Event> GetDetails(GetRequest request, CancellationToken ct);
 
         Task<GetEventImagesResponse> GetImages(GetRequest request);
         Task<GetEventImagesResponse> GetImages(GetRequest request, CancellationToken ct);
 
-        Task<SearchEventsResponse> EventSearch(SearchEventsRequest request);
-        Task<SearchEventsResponse> EventSearch(SearchEventsRequest request, CancellationToken ct);
+        Task<SearchEventsResponse> Search(SearchEventsRequest request);
+        Task<SearchEventsResponse> Search(SearchEventsRequest request, CancellationToken ct);
     }
 }

@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -14,8 +14,8 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-using RestSharp;
 using System.Net;
+using RestSharp;
 using Ticketmaster.Core;
 using Ticketmaster.Core.Extensions;
 using Ticketmaster.Core.V2.Models;
@@ -35,19 +35,19 @@ namespace Ticketmaster.Discovery
         {
         }
 
-        public Task<SearchEventsResponse> EventSearch(SearchEventsRequest request) =>
-            EventSearch(request, CancellationToken.None);
+        public Task<SearchEventsResponse> Search(SearchEventsRequest request) =>
+            Search(request, CancellationToken.None);
 
-        public async Task<SearchEventsResponse> EventSearch(SearchEventsRequest request, CancellationToken ct)
+        public async Task<SearchEventsResponse> Search(SearchEventsRequest request, CancellationToken ct)
         {
             var searchRequest = new RestRequest(EventsPath) { RequestFormat = DataFormat.Json };
             return await Execute<SearchEventsResponse>(searchRequest, request, HttpStatusCode.OK, ct);
         }
 
-        public Task<Event> GetEventDetails(GetRequest request) =>
-            GetEventDetails(request, CancellationToken.None);
+        public Task<Event> GetDetails(GetRequest request) =>
+            GetDetails(request, CancellationToken.None);
 
-        public async Task<Event> GetEventDetails(GetRequest request, CancellationToken ct) =>
+        public async Task<Event> GetDetails(GetRequest request, CancellationToken ct) =>
             await Execute<Event>(request.ToRestRequest(EventsPathWithId), request, HttpStatusCode.OK, ct);
 
         public Task<GetEventImagesResponse> GetImages(GetRequest request) =>

@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -14,10 +14,20 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
+using System.Text.Json.Serialization;
+
 namespace Ticketmaster.Core.V2.Models
 {
     public class Sales
     {
+        public Sales()
+        {
+            PreSales = new List<PreSale>();
+        }
+
         public Public Public { get; set; }
+
+        [JsonPropertyName("presales")]
+        public List<PreSale> PreSales { get; set; }
     }
 }

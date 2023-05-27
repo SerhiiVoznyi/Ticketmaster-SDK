@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -23,10 +23,12 @@ namespace Ticketmaster.Discovery.Models
 
     public class SearchClassificationsResponse : IApiResponse
     {
-        [JsonPropertyName("_embedded")]
+        [JsonPropertyName("Embedded")]
         public EmbeddedData Embedded { get; set; }
 
+        [JsonPropertyName("_links")]
         public Links Links { get; set; }
+
         public Page Page { get; set; }
 
         public class EmbeddedData

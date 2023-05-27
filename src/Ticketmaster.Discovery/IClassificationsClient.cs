@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -23,11 +23,11 @@ namespace Ticketmaster.Discovery
 
     public interface IClassificationsClient
     {
-        public Task<SearchClassificationsResponse> ClassificationSearch(IApiRequest request);
-        public Task<SearchClassificationsResponse> ClassificationSearch(IApiRequest request, CancellationToken ct);
+        public Task<SearchClassificationsResponse> Search(SearchClassificationsRequest request);
+        public Task<SearchClassificationsResponse> Search(SearchClassificationsRequest request, CancellationToken ct);
 
-        public Task<Classification> GetClassificationDetails(GetRequest request);
-        public Task<Classification> GetClassificationDetails(GetRequest request, CancellationToken ct);
+        public Task<Classification> GetDetails(GetRequest request);
+        public Task<Classification> GetDetails(GetRequest request, CancellationToken ct);
 
         public Task<GetGenreDetailsResponse> GetGenreDetails(GetRequest request);
         public Task<GetGenreDetailsResponse> GetGenreDetails(GetRequest request, CancellationToken ct);

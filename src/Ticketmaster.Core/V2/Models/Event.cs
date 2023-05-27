@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2023 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -17,19 +17,30 @@
 namespace Ticketmaster.Core.V2.Models
 {
     using System.Collections.Generic;
+    using System.Text.Json.Serialization;
 
     public class Event : BaseEvent, IApiResponse
     {
-        public Embedded _embedded { get; set; }
+        [JsonPropertyName("_embedded")]
+        public EmbeddedData Embedded { get; set; }
+
         public List<Classification> Classifications { get; set; }
+
         public Dates Dates { get; set; }
 
         public string Description { get; set; }
+
+        [JsonPropertyName("_links")]
         public Links Links { get; set; }
+
         public List<PriceRange> PriceRanges { get; set; }
+
         public List<Product> Products { get; set; }
+
         public Promoter Promoter { get; set; }
+
         public Sales Sales { get; set; }
+
         public Seatmap Seatmap { get; set; }
 
         public Event()
@@ -39,11 +50,11 @@ namespace Ticketmaster.Core.V2.Models
             Classifications = new List<Classification>();
         }
 
-        public class Embedded
+        public class EmbeddedData
         {
             public List<Venue> Venues { get; set; }
 
-            public Embedded()
+            public EmbeddedData()
             {
                 Venues = new List<Venue>();
             }
