@@ -16,8 +16,6 @@
 
 namespace Ticketmaster.Discovery.Models
 {
-    using Ticketmaster.Core;
-
     public class SearchEventsRequest : BaseQuery<SearchEventsRequest, string>, IApiRequest
     {
         public override SearchEventsRequest AddQueryParameter<TValue>(string parameter,

@@ -14,8 +14,6 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-using Ticketmaster.Core;
-using Ticketmaster.Core.V2.Models;
 using Ticketmaster.Discovery.Models;
 
 namespace Ticketmaster.Discovery

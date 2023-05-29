@@ -18,8 +18,6 @@ namespace Ticketmaster.Discovery.Models
 {
     using System.Collections.Generic;
     using System.Text.Json.Serialization;
-    using Ticketmaster.Core;
-    using Ticketmaster.Core.V2.Models;
 
     public class GetEventImagesResponse : IApiResponse
     {

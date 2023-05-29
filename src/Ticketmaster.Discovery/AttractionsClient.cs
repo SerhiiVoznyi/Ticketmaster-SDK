@@ -14,15 +14,12 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-using Ticketmaster.Core.Extensions;
-
 namespace Ticketmaster.Discovery
 {
-    using RestSharp;
     using System.Net;
     using System.Threading.Tasks;
-    using Ticketmaster.Core;
-    using Ticketmaster.Core.V2.Models;
+    using RestSharp;
+    using Ticketmaster.Discovery.Extensions;
     using Ticketmaster.Discovery.Models;
 
     public class AttractionsClient : BaseClient, IAttractionsClient

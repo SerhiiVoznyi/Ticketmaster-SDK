@@ -16,9 +16,7 @@
 
 using System.Net;
 using RestSharp;
-using Ticketmaster.Core;
-using Ticketmaster.Core.Extensions;
-using Ticketmaster.Core.V2.Models;
+using Ticketmaster.Discovery.Extensions;
 using Ticketmaster.Discovery.Models;
 
 namespace Ticketmaster.Discovery

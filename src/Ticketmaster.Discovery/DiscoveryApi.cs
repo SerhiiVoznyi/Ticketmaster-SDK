@@ -17,9 +17,8 @@
 
 namespace Ticketmaster.Discovery
 {
-    using RestSharp;
     using System;
-    using Ticketmaster.Core;
+    using RestSharp;
 
     public class DiscoveryApi : IDiscoveryClient, IDisposable
     {

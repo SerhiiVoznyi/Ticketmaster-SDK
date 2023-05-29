@@ -17,8 +17,6 @@
 namespace Ticketmaster.Discovery
 {
     using System.Threading.Tasks;
-    using Ticketmaster.Core;
-    using Ticketmaster.Core.V2.Models;
     using Ticketmaster.Discovery.Models;
 
     public interface IVenuesClient

@@ -14,10 +14,9 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-using RestSharp;
 using System.Net;
-using Ticketmaster.Core;
-using Ticketmaster.Core.Extensions;
+using RestSharp;
+using Ticketmaster.Discovery.Extensions;
 using Ticketmaster.Discovery.Models;
 
 namespace Ticketmaster.Discovery

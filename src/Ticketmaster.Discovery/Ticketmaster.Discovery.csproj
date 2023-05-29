@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Serhii Voznyi</Authors>
 		<Company>Serhii Voznyi</Company>
-		<Version>3.0.0-alpha</Version>
+		<Version>3.0.1-alpha</Version>
 		<Description>
 			The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
 			[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
@@ -22,10 +22,11 @@
 			WARNING! Were introduced breaking changes!
 			* Updated Packages.
 			* Removed legacy methods.
+			* Removed Ticketmaster.Core package dependency.
 			* Global refactoring.
 		</PackageReleaseNotes>
-		<AssemblyVersion>3.0.0.0</AssemblyVersion>
-		<FileVersion>3.0.0.0</FileVersion>
+		<AssemblyVersion>3.0.1.0</AssemblyVersion>
+		<FileVersion>3.0.1.0</FileVersion>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageIcon>tm.png</PackageIcon>
@@ -42,9 +43,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Ticketmaster.Core\Ticketmaster.Core.csproj" />
+	  <PackageReference Include="RestSharp" Version="110.2.0" />
 	</ItemGroup>
-
+	
 	<ItemGroup>
 	  <None Update="tm.png">
 	    <Pack>True</Pack>

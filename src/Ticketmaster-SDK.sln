@@ -5,9 +5,7 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ticketmaster.Discovery", "Ticketmaster.Discovery\Ticketmaster.Discovery.csproj", "{654ECD8A-1AE8-4C92-8AA4-56738E3A37AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ticketmaster.Core", "Ticketmaster.Core\Ticketmaster.Core.csproj", "{EA459AFF-FE88-4A85-B9AB-C9201BAA39B3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketmaster.Discovery.Tests", "Ticketmaster.Discovery.Tests\Ticketmaster.Discovery.Tests.csproj", "{5BC76BEA-1429-4761-A5D1-67D8B79D406E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ticketmaster.Discovery.Tests", "Ticketmaster.Discovery.Tests\Ticketmaster.Discovery.Tests.csproj", "{5BC76BEA-1429-4761-A5D1-67D8B79D406E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		{654ECD8A-1AE8-4C92-8AA4-56738E3A37AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{654ECD8A-1AE8-4C92-8AA4-56738E3A37AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{654ECD8A-1AE8-4C92-8AA4-56738E3A37AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA459AFF-FE88-4A85-B9AB-C9201BAA39B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA459AFF-FE88-4A85-B9AB-C9201BAA39B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA459AFF-FE88-4A85-B9AB-C9201BAA39B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA459AFF-FE88-4A85-B9AB-C9201BAA39B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5BC76BEA-1429-4761-A5D1-67D8B79D406E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5BC76BEA-1429-4761-A5D1-67D8B79D406E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC76BEA-1429-4761-A5D1-67D8B79D406E}.Release|Any CPU.ActiveCfg = Release|Any CPU

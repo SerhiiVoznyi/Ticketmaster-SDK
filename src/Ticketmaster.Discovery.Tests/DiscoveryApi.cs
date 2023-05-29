@@ -9,7 +9,7 @@ public partial class DiscoveryApiTests
 
     public DiscoveryApiTests()
     {
-        Api = new DiscoveryApi("YOUR CLIENT API KEY");
+        Api = new DiscoveryApi("YOUR_API_KEY");
     }
 
     [Fact]

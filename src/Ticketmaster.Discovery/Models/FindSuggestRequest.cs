@@ -16,8 +16,6 @@
 
 namespace Ticketmaster.Discovery.Models
 {
-    using Ticketmaster.Core;
-
     public class FindSuggestRequest : BaseQuery<FindSuggestRequest, FindSuggestQueryParameters>, IApiRequest
     {
         public override FindSuggestRequest AddQueryParameter<TValue>(FindSuggestQueryParameters parameter, TValue value)

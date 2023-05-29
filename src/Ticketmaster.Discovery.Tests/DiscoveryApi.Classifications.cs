@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using Ticketmaster.Core;
 using Ticketmaster.Discovery.Models;
 using Xunit;
 

@@ -19,8 +19,6 @@ using System.Text.Json.Serialization;
 namespace Ticketmaster.Discovery.Models
 {
     using System.Collections.Generic;
-    using Ticketmaster.Core;
-    using Ticketmaster.Core.V2.Models;
 
     public class SearchAttractionsResponse : IApiResponse
     {

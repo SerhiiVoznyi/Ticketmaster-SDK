@@ -16,8 +16,6 @@
 
 namespace Ticketmaster.Discovery
 {
-    using Ticketmaster.Core;
-
     public class Config : IClientConfig
     {
         public Config(string consumerKey)
