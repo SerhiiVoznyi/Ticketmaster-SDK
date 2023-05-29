@@ -9,7 +9,6 @@
 		<Company>Serhii Voznyi</Company>
 		<Version>3.0.0-alpha</Version>
 		<Description>
-			WARNING!!! Breaking changes starting from package version 3.0.0!!!
 			The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
 			[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
 		</Description>
@@ -20,15 +19,27 @@
 		<PackageTags>Ticketmaster Discovery</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReleaseNotes>
-			Global refactoring.
+			WARNING! Were introduced breaking changes!
+			* Updated Packages.
+			* Removed legacy methods.
+			* Global refactoring.
 		</PackageReleaseNotes>
 		<AssemblyVersion>3.0.0.0</AssemblyVersion>
 		<FileVersion>3.0.0.0</FileVersion>
 		<PackageLicenseExpression></PackageLicenseExpression>
-		<PackageLicenseFile></PackageLicenseFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageIcon>tm.png</PackageIcon>
 		<PackageIconUrl />
+		<Title>The Ticketmaster Discovery API Client</Title>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Ticketmaster.Core\Ticketmaster.Core.csproj" />
@@ -39,6 +50,13 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="LICENSE.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 </Project>
