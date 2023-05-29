@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,15 +13,22 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core
 {
+    using System.Text.Json.Serialization;
     using Ticketmaster.Core.V2.Models;
 
     public abstract class ApiResponseBase<TData> : IApiResponse<TData>
     {
-        public TData _embedded { get; set; }
-        public TData Data => _embedded;
+        [JsonPropertyName("_links")]
         public Links Links { get; set; }
+
         public Page Page { get; set; }
+
+        [JsonPropertyName("_embedded")]
+        public TData Embedded { get; set; }
+
+        public TData Data => Embedded;
     }
 }

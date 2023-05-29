@@ -1,65 +1,44 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Authors>Serhii Voznyi</Authors>
-    <Company>Serhii Voznyi</Company>
-    <Version>2.0.5</Version>
-    <Description>This project contains useful interfaces and implementation for them to makes calls to api endpoint more simple and friendly for .net developers. 
-     The SDK splits all requests for Discovery API between specific interfaces by logical ownership.
-     *IEventsClient
-     *IVenuesClient
-     *IClassificationsClient
-     *IAttractionsClient
-     This interfaces contains methods which able to return response from Api in appropriate format, 
-     like a IRestResponse or like an IDiscoveryApiRespond. Also it contains a model classes for responses.</Description>
-    <Copyright>Serhii Voznyi © 2019</Copyright>
-    <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/SerhiiVoznyi/ticketmaster-sdk</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/SerhiiVoznyi/ticketmaster-sdk</RepositoryUrl>
-    <PackageTags>Ticketmaster Discovery</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Added ClientFactory class to create global API access point DiscoveryApi class like this:
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Serhii Voznyi</Authors>
+		<Company>Serhii Voznyi</Company>
+		<Version>3.0.0-alpha</Version>
+		<Description>
+			WARNING!!! Breaking changes starting from package version 3.0.0!!!
+			The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
+			[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
+		</Description>
+		<Copyright>Serhii Voznyi © 2023</Copyright>
+		<PackageLicenseUrl></PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/SerhiiVoznyi/Ticketmaster-SDK</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SerhiiVoznyi/Ticketmaster-SDK</RepositoryUrl>
+		<PackageTags>Ticketmaster Discovery</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageReleaseNotes>
+			Global refactoring.
+		</PackageReleaseNotes>
+		<AssemblyVersion>3.0.0.0</AssemblyVersion>
+		<FileVersion>3.0.0.0</FileVersion>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<PackageLicenseFile></PackageLicenseFile>
+		<PackageIcon>tm.png</PackageIcon>
+		<PackageIconUrl />
+	</PropertyGroup>
 
-var config = new Config("Your API Key");
-var factory = new ClientFactory();
-var discovery = factory.Create&lt;DiscoveryApi&gt;(config);
-Or simply create instance of DiscoveryApi class and call method .Configure(config).
+	<ItemGroup>
+		<ProjectReference Include="..\Ticketmaster.Core\Ticketmaster.Core.csproj" />
+	</ItemGroup>
 
-var config = new Config("Your API Key");
-var discovery = new DiscoveryApi().Configure(config);
-Then we will be able to access all clients in this api. To access the endpoints for Events we can use Events Client like this:
-
-discovery.Events.SearchEventsAsync(new SearchEventsRequest());</PackageReleaseNotes>
-    <AssemblyVersion>2.0.5.0</AssemblyVersion>
-    <FileVersion>2.0.5.0</FileVersion>
-    <PackageLicenseExpression></PackageLicenseExpression>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <PackageIcon>tm.jpg</PackageIcon>
-    <PackageIconUrl />
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\..\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\..\tm.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Ticketmaster.Core" Version="2.0.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Ticketmaster.Core\Ticketmaster.Core.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+	  <None Update="tm.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 </Project>

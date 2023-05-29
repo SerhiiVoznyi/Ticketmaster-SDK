@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,11 +13,11 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core
 {
     public static class CountryCodes
     {
-        public const string UnitedStatesOfAmerica = "US";
         public const string Andorra = "AD";
         public const string Anguilla = "AI";
         public const string Argentina = "AR";
@@ -98,6 +98,7 @@ namespace Ticketmaster.Core
         public const string Turkey = "TR";
         public const string Ukraine = "UA";
         public const string UnitedArabEmirates = "AE";
+        public const string UnitedStatesOfAmerica = "US";
         public const string Uruguay = "UY";
         public const string Venezuela = "VE";
     }

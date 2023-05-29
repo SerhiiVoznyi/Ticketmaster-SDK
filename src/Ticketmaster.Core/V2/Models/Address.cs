@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,11 +13,13 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core.V2.Models
 {
     public class Address
     {
         public string Line1 { get; set; }
+
         public string Line2 { get; set; }
     }
 }

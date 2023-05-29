@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,21 +13,22 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core.V2.Models
 {
     using System.Collections.Generic;
 
     public class Links
     {
+        public Link First { get; set; }
+        public Link Last { get; set; }
+        public Link Next { get; set; }
+        public Link Self { get; set; }
+        public List<Link> Venues { get; set; }
+
         public Links()
         {
             Venues = new List<Link>();
         }
-
-        public Link First { get; set; }
-        public Link Self { get; set; }
-        public Link Next { get; set; }
-        public Link Last { get; set; }
-        public List<Link> Venues { get; set; }
     }
 }

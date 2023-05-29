@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,11 +13,12 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core
 {
     public class MinMaxPair
     {
-        public decimal Min { get; set; }
         public decimal Max { get; set; }
+        public decimal Min { get; set; }
     }
 }

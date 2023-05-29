@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -16,15 +16,12 @@
 
 namespace Ticketmaster.Core
 {
-    using RestSharp;
     using System.IO;
     using System.Net;
     using System.Text;
     using System.Threading.Tasks;
+    using RestSharp;
 
-    /// <summary>
-    ///     The BaseClient class.
-    /// </summary>
     public abstract class BaseClient
     {
         private readonly IRestClient _client;
@@ -38,14 +35,29 @@ namespace Ticketmaster.Core
             _config = config;
         }
 
-        /// <summary>
-        ///     Validates the response.
-        /// </summary>
-        /// <param name="response">The response.</param>
-        /// <param name="expectedCode">The <see cref="HttpStatusCode" />.</param>
-        /// Throw
-        /// <exception cref="System.IO.InvalidDataException"> when StatusCode not expected.</exception>
-        protected virtual void ValidateResponse(IRestResponse response, HttpStatusCode expectedCode)
+        protected async Task<T> Execute<T>(
+            RestRequest request,
+            IApiRequest query,
+            HttpStatusCode expectedStatusCode,
+            CancellationToken ct)
+            where T : IApiResponse
+        {
+            AddQueriesToRequest(ref request, query);
+            var response = await _client.ExecuteAsync<T>(request, ct);
+            ValidateResponse(response, expectedStatusCode);
+            return response.Data;
+        }
+
+        protected virtual void AddQueriesToRequest(ref RestRequest request, IApiRequest query)
+        {
+            if (query == null) return;
+
+            foreach (var parameter in query.QueryParameters)
+                request.AddParameter(parameter.Key, parameter.Value, ParameterType.QueryString);
+            request.AddParameter("apikey", _config.ConsumerKey, ParameterType.QueryString);
+        }
+
+        protected virtual void ValidateResponse(RestResponse response, HttpStatusCode expectedCode)
         {
             if (response.StatusCode == expectedCode) return;
 
@@ -57,61 +69,6 @@ namespace Ticketmaster.Core
             if (!string.IsNullOrEmpty(response.Content))
                 exceptionBuilder.AppendLine("Content:" + response.Content);
             throw new InvalidDataException(exceptionBuilder.ToString());
-        }
-
-        /// <summary>
-        ///     Adds the Query to request.
-        /// </summary>
-        /// <param name="request">The <see cref="IRestRequest" /> request.</param>
-        /// <param name="query">The <see cref="IApiRequest" /> query.</param>
-        protected virtual void AddQueriesToRequest(ref IRestRequest request, IApiRequest query)
-        {
-            if (query == null) return;
-
-            foreach (var parameter in query.QueryParameters)
-                request.AddParameter(parameter.Key, parameter.Value, ParameterType.QueryString);
-            request.AddParameter("apikey", _config.ConsumerKey, ParameterType.QueryString);
-        }
-
-        /// <summary>
-        ///     Executes the request asynchronously.
-        /// </summary>
-        /// <typeparam name="T">Type of expected response.</typeparam>
-        /// <param name="request">The request.</param>
-        /// <param name="expectedStatusCode">The expected status code.</param>
-        /// <param name="query">The <see cref="IApiRequest" />.</param>
-        /// <returns></returns>
-        protected virtual async Task<T> ExecuteRequestAsync<T>(
-            IRestRequest request,
-            HttpStatusCode expectedStatusCode,
-            IApiRequest query = null)
-            where T : IApiResponse
-        {
-            AddQueriesToRequest(ref request, query);
-            var response = await _client.ExecuteAsync<T>(request);
-            ValidateResponse(response, expectedStatusCode);
-            return response.Data;
-        }
-
-        /// <summary>
-        ///     Executes the request asynchronously.
-        /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="query">
-        ///     The
-        ///     <see>
-        ///         <cref>BaseQuery</cref>
-        ///     </see>
-        ///     query class.
-        /// </param>
-        /// <returns>The <see cref="IRestResponse" /> object.</returns>
-        protected virtual async Task<IRestResponse> ExecuteRequestAsync(
-            IRestRequest request,
-            IApiRequest query = null)
-        {
-            AddQueriesToRequest(ref request, query);
-            var response = await _client.ExecuteAsync(request);
-            return response;
         }
     }
 }

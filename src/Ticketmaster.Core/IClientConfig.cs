@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,6 +13,7 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core
 {
     /// <summary>
@@ -22,14 +23,6 @@ namespace Ticketmaster.Core
     public interface IClientConfig
     {
         /// <summary>
-        ///     Gets the Consumer API key for current customer.
-        /// </summary>
-        /// <value>
-        ///     The string Consumer Api Key.
-        /// </value>
-        string ConsumerKey { get; }
-
-        /// <summary>
         ///     Gets the root URL for ticket master web api.
         /// </summary>
         /// <value>
@@ -38,5 +31,13 @@ namespace Ticketmaster.Core
         ///     .
         /// </value>
         string ApiRootUrl { get; }
+
+        /// <summary>
+        ///     Gets the Consumer API key for current customer.
+        /// </summary>
+        /// <value>
+        ///     The string Consumer Api Key.
+        /// </value>
+        string ConsumerKey { get; }
     }
 }

@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,21 +13,28 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core.V2.Models
 {
     using System.Collections.Generic;
+    using System.Text.Json.Serialization;
+
     public class Segment : IdNamePair
     {
+        [JsonPropertyName("_embedded")]
+        public EmbeddedSegment Embedded { get; set; }
+
+        [JsonPropertyName("_links")]
         public Links Links { get; set; }
-        public Embedded _embedded { get; set; }
-        public class Embedded
+
+        public class EmbeddedSegment
         {
-            public Embedded()
+            public List<Genre> Genres { get; set; }
+
+            public EmbeddedSegment()
             {
                 Genres = new List<Genre>();
             }
-
-            public List<Genre> Genres { get; set; }
         }
     }
 }

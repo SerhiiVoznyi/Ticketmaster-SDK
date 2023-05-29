@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,12 +13,13 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core
 {
     using System;
     using System.Collections.Generic;
 
-    public abstract class BaseQuery<TRequest, TParameter> : IApiRequest
+    public abstract class BaseQuery<TRequest, TParameter>
     {
         private readonly Dictionary<string, string> Parameters;
 
@@ -27,29 +28,23 @@ namespace Ticketmaster.Core
             Parameters = new Dictionary<string, string>();
         }
 
-        protected void AddParameter<TValue>(TParameter parameterName, TValue value)
-        {
-            var key = parameterName.ToString();
-            if (Parameters.ContainsKey(key))
-            {
-                Parameters.Remove(key);
-            }
-
-            Parameters.Add(key, Normalize(value));
-        }
-
         public IEnumerable<KeyValuePair<string, string>> QueryParameters => Parameters;
-
-        public abstract TRequest AddQueryParameter<TValue>(TParameter parameterName, TValue value);
 
         private string Normalize<TValue>(TValue value)
         {
-            if (value is DateTime time)
-            {
-                return time.ToString(ApiConstraints.DateTimeFormat);
-            }
+            if (value is DateTime time) return time.ToString(ApiConstraints.DateTimeFormat);
 
             return value.ToString();
+        }
+
+        public abstract TRequest AddQueryParameter<TValue>(TParameter parameterName, TValue value);
+
+        protected void AddParameter<TValue>(TParameter parameterName, TValue value)
+        {
+            var key = parameterName.ToString();
+            if (Parameters.ContainsKey(key)) Parameters.Remove(key);
+
+            Parameters.Add(key, Normalize(value));
         }
     }
 }

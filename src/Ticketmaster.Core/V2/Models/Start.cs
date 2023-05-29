@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,18 +13,19 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core.V2.Models
 {
     using System;
 
     public class Start
     {
+        public bool DateTba { get; set; }
+        public bool DateTbd { get; set; }
+        public DateTime DateTime { get; set; }
         public string LocalDate { get; set; }
         public string LocalTime { get; set; }
-        public DateTime DateTime { get; set; }
-        public bool DateTbd { get; set; }
-        public bool DateTba { get; set; }
-        public bool TimeTba { get; set; }
         public bool NoSpecificTime { get; set; }
+        public bool TimeTba { get; set; }
     }
 }

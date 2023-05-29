@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2021 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -13,10 +13,61 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
+
 namespace Ticketmaster.Core
 {
     public static class Markets
     {
+        public enum AustraliaAndNewZealand
+        {
+            New_South_Wales_Australian_Capital_Territory = 302,
+            Queensland = 303,
+            Western_Australi = 304,
+            Victoria_Tasmania = 305,
+            Western_Australia = 306,
+            North_Island = 351,
+            South_Island = 352
+        }
+
+        public enum Canada
+        {
+            Toronto_Hamilton_And_Area = 102,
+            Ottawa_And_Eastern_Ontario = 103,
+            Manitoba = 106,
+            Edmonton_And_Northern_Alberta = 107,
+            Calgary_And_Southern_Alberta = 108,
+            B_C_Interior = 110,
+            Vancouver_And_Area = 111,
+            Saskatchewan = 112,
+            Montreal_And_Area = 120
+        }
+
+        public enum Europe
+        {
+            UK_London = 202,
+            UK_South = 203,
+            UK_Midlands_And_Central = 204,
+            UK_Wales_And_North_West = 205,
+            UK_North_And_North_East = 206,
+            Scotland = 207,
+            Ireland = 208,
+            Northern_Ireland = 209,
+            Germany = 210,
+            Netherlands = 211,
+            Sweden = 500,
+            Spain = 501,
+            Spain_Barcelona = 502,
+            Spain_Madrid = 503,
+            Turkey = 600
+        }
+
+        public enum Mexico
+        {
+            Mexico_City_And_Metropolitan_Area = 402,
+            Monterrey = 403,
+            Guadalajara = 404
+        }
+
         public enum USA
         {
             Birmingham_Amd_More = 1,
@@ -84,41 +135,9 @@ namespace Ticketmaster.Core
             return (int)value;
         }
 
-        public enum Canada
-        {
-            Toronto_Hamilton_And_Area = 102,
-            Ottawa_And_Eastern_Ontario = 103,
-            Manitoba = 106,
-            Edmonton_And_Northern_Alberta = 107,
-            Calgary_And_Southern_Alberta = 108,
-            B_C_Interior = 110,
-            Vancouver_And_Area = 111,
-            Saskatchewan = 112,
-            Montreal_And_Area = 120
-        }
-
         public static int GetMarketId(this Canada value)
         {
             return (int)value;
-        }
-
-        public enum Europe
-        {
-            UK_London = 202,
-            UK_South = 203,
-            UK_Midlands_And_Central = 204,
-            UK_Wales_And_North_West = 205,
-            UK_North_And_North_East = 206,
-            Scotland = 207,
-            Ireland = 208,
-            Northern_Ireland = 209,
-            Germany = 210,
-            Netherlands = 211,
-            Sweden = 500,
-            Spain = 501,
-            Spain_Barcelona = 502,
-            Spain_Madrid = 503,
-            Turkey = 600
         }
 
         public static int GetMarketId(this Europe value)
@@ -126,27 +145,9 @@ namespace Ticketmaster.Core
             return (int)value;
         }
 
-        public enum AustraliaAndNewZealand
-        {
-            New_South_Wales_Australian_Capital_Territory = 302,
-            Queensland = 303,
-            Western_Australi = 304,
-            Victoria_Tasmania = 305,
-            Western_Australia = 306,
-            North_Island = 351,
-            South_Island = 352
-        }
-
         public static int GetMarketId(this AustraliaAndNewZealand value)
         {
             return (int)value;
-        }
-
-        public enum Mexico
-        {
-            Mexico_City_And_Metropolitan_Area = 402,
-            Monterrey = 403,
-            Guadalajara = 404
         }
 
         public static int GetMarketId(this Mexico value)
