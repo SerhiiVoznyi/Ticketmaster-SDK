@@ -8,8 +8,10 @@
 		<Authors>Serhii Voznyi</Authors>
 		<Company>Serhii Voznyi</Company>
 		<Version>3.0.0-alpha</Version>
-		<Description>The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
-[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
+		<Description>
+			WARNING!!! Breaking changes starting from package version 3.0.0!!!
+			The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
+			[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
 		</Description>
 		<Copyright>Serhii Voznyi © 2023</Copyright>
 		<PackageLicenseUrl></PackageLicenseUrl>

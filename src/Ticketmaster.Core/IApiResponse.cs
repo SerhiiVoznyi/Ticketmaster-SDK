@@ -24,7 +24,7 @@ namespace Ticketmaster.Core
 
     public interface IApiResponse<TData> : IApiResponse
     {
-        [JsonPropertyName("Embedded")]
+        [JsonPropertyName("_embedded")]
         TData Embedded { get; set; }
 
         TData Data => Embedded;

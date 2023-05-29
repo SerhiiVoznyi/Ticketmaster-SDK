@@ -21,7 +21,7 @@ namespace Ticketmaster.Core.V2.Models
 
     public class Genre
     {
-        [JsonPropertyName("Embedded")]
+        [JsonPropertyName("_embedded")]
         public EmbeddedData Embedded { get; set; }
 
         public string Id { get; set; }

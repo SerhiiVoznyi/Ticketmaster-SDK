@@ -23,7 +23,7 @@ namespace Ticketmaster.Discovery.Models
 
     public class GetGenreDetailsResponse : IdNamePair, IApiResponse
     {
-        [JsonPropertyName("Embedded")]
+        [JsonPropertyName("_embedded")]
         public EmbeddedData Embedded { get; set; }
 
         [JsonPropertyName("_links")]
