@@ -23,10 +23,12 @@ namespace Ticketmaster.Discovery.Models
         public Link Next { get; set; }
         public Link Self { get; set; }
         public List<Link> Venues { get; set; }
+        public List<Link> Attractions { get; set; }
 
         public Links()
         {
             Venues = new List<Link>();
+            Attractions = new List<Link>();
         }
     }
 }

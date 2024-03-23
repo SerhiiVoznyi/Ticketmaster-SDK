@@ -53,9 +53,13 @@ namespace Ticketmaster.Discovery.Models
         {
             public List<Venue> Venues { get; set; }
 
+            public List<Attraction> Attractions { get; set; }
+
             public EmbeddedData()
             {
                 Venues = new List<Venue>();
+
+                Attractions = new List<Attraction>();
             }
         }
     }

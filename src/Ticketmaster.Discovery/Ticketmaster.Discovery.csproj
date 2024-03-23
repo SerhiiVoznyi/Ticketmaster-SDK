@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Serhii Voznyi</Authors>
 		<Company>Serhii Voznyi</Company>
-		<Version>3.0.0</Version>
+		<Version>3.0.1</Version>
 		<Description>
 			The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
 			[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
@@ -19,14 +19,18 @@
 		<PackageTags>Ticketmaster Discovery</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReleaseNotes>
+			3.0.0
 			WARNING! Were introduced breaking changes!
 			* Updated Packages.
 			* Removed legacy methods.
 			* Removed Ticketmaster.Core package dependency.
 			* Global refactoring.
+			3.0.1
+			* Added Attractions to the Embedded data for Events Search method.
+			* Added Attractions to the Links. 
 		</PackageReleaseNotes>
-		<AssemblyVersion>3.0.0.0</AssemblyVersion>
-		<FileVersion>3.0.0.0</FileVersion>
+		<AssemblyVersion>3.0.1.0</AssemblyVersion>
+		<FileVersion>3.0.1.0</FileVersion>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageIcon>tm.png</PackageIcon>

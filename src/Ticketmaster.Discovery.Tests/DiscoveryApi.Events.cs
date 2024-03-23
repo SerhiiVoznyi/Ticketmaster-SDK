@@ -16,9 +16,10 @@ public partial class DiscoveryApiTests
         searchResponse.Embedded.Should().NotBeNull();
         searchResponse.Embedded.Events.Should().NotBeEmpty();
 
-        var id = searchResponse.Embedded.Events.First().Id;
+        var @event = searchResponse.Embedded.Events.First();
+        @event.Embedded.Attractions.Should().NotBeEmpty();
 
-        var getRequest = new GetRequest(id);
+        var getRequest = new GetRequest(@event.Id);
         var getResponse = await Api.Events.GetDetails(getRequest);
 
         getResponse.Should().NotBeNull();
