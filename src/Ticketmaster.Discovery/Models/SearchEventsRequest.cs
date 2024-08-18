@@ -14,14 +14,29 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
+using Ticketmaster.Discovery.Constants;
+
 namespace Ticketmaster.Discovery.Models
 {
     public class SearchEventsRequest : BaseQuery<SearchEventsRequest, string>, IApiRequest
     {
-        public override SearchEventsRequest AddQueryParameter<TValue>(string parameter,
+        public override SearchEventsRequest AddQueryParameter<TValue>(
+            string parameter,
             TValue value)
         {
             AddParameter(parameter, value);
+            return this;
+        }
+
+        public SearchEventsRequest AddQueryByPreSaleDateTime(
+            DateTime? startDate,
+            DateTime? endDate
+            )
+        {
+            var startString = startDate?.ToString(ApiConstraints.DateTimeFormat) ?? "*";
+            var endString = endDate?.ToString(ApiConstraints.DateTimeFormat) ?? "*";
+
+            AddParameter(KnownQueryParameters.PreSaleDateTime, $"{startString},{endString}");
             return this;
         }
     }

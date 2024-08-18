@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Ticketmaster.Discovery.Extensions;
 using Ticketmaster.Discovery.Models;
 using Xunit;
 
@@ -27,5 +28,29 @@ public partial class DiscoveryApiTests
         var getImagesResponse = await Api.Events.GetImages(getRequest);
 
         getImagesResponse.Should().NotBeNull();
+    }
+
+    [Fact]
+    public async Task DiscoveryApi_GetAll_ShouldWork()
+    {
+        var result =
+            await Api.Events.GetAllSearchResults(
+                new SearchEventsRequest()
+                    .AddQueryParameter("city", "Wroclaw"),
+                CancellationToken.None);
+
+        result.Should().NotBeEmpty();
+    }
+
+    [Fact]
+    public async Task DiscoveryApi_GetAll_ShouldWork2()
+    {
+        var result =
+            await Api.Events.GetAllSearchResults(
+                new SearchEventsRequest()
+                    .AddQueryByPreSaleDateTime(new DateTime(2025, 1, 1), null),
+                CancellationToken.None);
+
+        result.Should().NotBeEmpty();
     }
 }
