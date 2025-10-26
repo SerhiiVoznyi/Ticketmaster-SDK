@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2026 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //

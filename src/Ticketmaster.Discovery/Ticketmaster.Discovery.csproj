@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Serhii Voznyi</Authors>
 		<Company>Serhii Voznyi</Company>
-		<Version>3.0.1</Version>
+		<Version>3.0.2</Version>
 		<Description>
 			The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
 			[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
@@ -29,8 +29,8 @@
 			* Added Attractions to the Embedded data for Events Search method.
 			* Added Attractions to the Links. 
 		</PackageReleaseNotes>
-		<AssemblyVersion>3.0.1.0</AssemblyVersion>
-		<FileVersion>3.0.1.0</FileVersion>
+		<AssemblyVersion>3.0.2.0</AssemblyVersion>
+		<FileVersion>3.0.2.0</FileVersion>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageIcon>tm.png</PackageIcon>
@@ -47,7 +47,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="RestSharp" Version="110.2.0" />
+	  <PackageReference Include="RestSharp" Version="112.1.0" />
 	</ItemGroup>
 	
 	<ItemGroup>

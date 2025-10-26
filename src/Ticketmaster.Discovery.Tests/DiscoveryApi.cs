@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+﻿using Shouldly;
 using Xunit;
 
 namespace Ticketmaster.Discovery.Tests;
@@ -9,16 +9,16 @@ public partial class DiscoveryApiTests
 
     public DiscoveryApiTests()
     {
-        Api = new DiscoveryApi("YOUR_API_KEY");
+        Api = new DiscoveryApi("I5Ux5I2PTXJqf300FBHnaWkaRhwWApvq");
     }
 
     [Fact]
     public void DiscoveryApi_Should_Construct()
     {
-        Api.Attractions.Should().NotBeNull();
-        Api.Classifications.Should().NotBeNull();
-        Api.Events.Should().NotBeNull();
-        Api.Suggestions.Should().NotBeNull();
-        Api.Venues.Should().NotBeNull();
+        Api.Attractions.ShouldNotBeNull();
+        Api.Classifications.ShouldNotBeNull();
+        Api.Events.ShouldNotBeNull();
+        Api.Suggestions.ShouldNotBeNull();
+        Api.Venues.ShouldNotBeNull();
     }
 }

@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+﻿using Shouldly;
 using Ticketmaster.Discovery.Models;
 using Xunit;
 
@@ -15,6 +15,6 @@ public partial class DiscoveryApiTests
         var getRequest = new GetRequest(searchResponse.Embedded.Attractions.First().Id);
         var getResponse = await Api.Attractions.GetDetails(getRequest);
 
-        getResponse.Should().NotBeNull();
+        getResponse.ShouldNotBeNull();
     }
 }
