@@ -1,4 +1,4 @@
-﻿//   Copyright © 2015-2024 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2026 Serhii Voznyi and open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
@@ -14,9 +14,10 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License. 
 
+using RestSharp;
 using System.Net;
 using System.Text;
-using RestSharp;
+using Ticketmaster.Discovery.Constants;
 using Ticketmaster.Discovery.Models;
 
 namespace Ticketmaster.Discovery
@@ -53,7 +54,7 @@ namespace Ticketmaster.Discovery
 
             foreach (var parameter in query.QueryParameters)
                 request.AddParameter(parameter.Key, parameter.Value, ParameterType.QueryString);
-            request.AddParameter("apikey", _config.ConsumerKey, ParameterType.QueryString);
+            request.AddParameter(KnownQueryParameters.API_KEY, _config.ConsumerKey, ParameterType.QueryString);
         }
 
         protected virtual void ValidateResponse(RestResponse response, HttpStatusCode expectedCode)
