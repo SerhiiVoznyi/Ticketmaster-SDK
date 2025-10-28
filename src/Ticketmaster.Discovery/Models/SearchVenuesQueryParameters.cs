@@ -26,6 +26,10 @@ namespace Ticketmaster.Discovery.Models
         stateCode = 6,
         countryCode = 7,
         includeTest = 8,
-        source = 9
+        source = 9,
+        geoPoint = 10,
+        radius = 11,
+        unit = 12
+        
     }
 }
