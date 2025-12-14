@@ -1,7 +1,7 @@
 # 🎟️ Ticketmaster Open API Wrapper for .NET
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SerhiiVoznyi/ticketmaster-api-sdk-dot-net/blob/master/LICENSE.md)  
-[![NuGet](https://img.shields.io/badge/NuGet-v3.0.2-blue.svg)](https://www.nuget.org/packages/Ticketmaster.Discovery/)
+[![NuGet](https://img.shields.io/badge/NuGet-v3.0.4-blue.svg)](https://www.nuget.org/packages/Ticketmaster.Discovery/)
 
 ---
 
@@ -76,7 +76,7 @@ var request = new SearchEventsRequest()
 - **Serhii Voznyi** – _Creator and Maintainer_
   - [LinkedIn](https://www.linkedin.com/in/serhii-voznyi/)
   - [Email](mailto:serhiivoznyi@gmail.com?Subject=TicketmasterSDK)
-  - Skype: `serhiivoznyi`
+  - Telegram: `@serhiivoznyi`
 
 See the list of [contributors](https://github.com/SerhiiVoznyi/ticketmaster-api-sdk-dot-net/graphs/contributors) who have participated in this project.
 

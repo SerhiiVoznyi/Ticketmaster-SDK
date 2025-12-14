@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿//   Copyright © 2015-2026 Serhii Voznyi and open source community
+=======
 ﻿//   Copyright © 2015-2026 Serhii Voznyi and the open source community
+>>>>>>> master
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
