@@ -1,9 +1,9 @@
-﻿//   Copyright © 2015-2026 Serhii Voznyi and open source community
+﻿//   Copyright © 2015-2026 Serhii Voznyi and the open source community
 //
 //     https://www.linkedin.com/in/serhii-voznyi/
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
-//   you may not use this file except in compliance with the License.
+//   You may not use this file except in compliance with the License.
 //   You may obtain a copy of the License at
 //
 //     http://www.apache.org/licenses/LICENSE-2.0
@@ -30,6 +30,5 @@ namespace Ticketmaster.Discovery.Models
         geoPoint = 10,
         radius = 11,
         unit = 12
-        
     }
 }
