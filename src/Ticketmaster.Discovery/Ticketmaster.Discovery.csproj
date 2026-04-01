@@ -1,13 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Serhii Voznyi</Authors>
 		<Company>Serhii Voznyi</Company>
-		<Version>3.0.4</Version>
+		<Version>3.0.5</Version>
 		<Description>
 			The Ticketmaster Discovery API client contains the implementation of all methods supported by Open Ticketmaster Discovery API.
 			[1](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
@@ -19,7 +19,7 @@
 		<PackageTags>Ticketmaster Discovery</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReleaseNotes>
-			3.0.4 - Add geo related params to Venue Search
+			3.0.5 - Package Update (2026-10-01) 
 		</PackageReleaseNotes>
 		<AssemblyVersion>3.0.2.0</AssemblyVersion>
 		<FileVersion>3.0.2.0</FileVersion>
@@ -39,7 +39,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="RestSharp" Version="112.1.0" />
+	  <PackageReference Include="RestSharp" Version="114.0.0" />
 	</ItemGroup>
 	
 	<ItemGroup>
